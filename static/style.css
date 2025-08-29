@@ -1,0 +1,115 @@
+/* ===============================
+   Modern Professional Stylesheet
+   =============================== */
+
+/* Font + Colors */
+:root {
+  --primary: #2563eb;     /* Blue */
+  --secondary: #64748b;   /* Gray */
+  --accent: #f97316;      /* Orange */
+  --bg: #f9fafb;          /* Light background */
+  --card-bg: #ffffff;     /* White for cards */
+  --text-dark: #111827;   /* Dark text */
+  --text-light: #6b7280;  /* Muted text */
+  --radius: 12px;
+  --shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+/* Layout */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* Cards */
+.card {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Typography */
+h1, h2, h3 {
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+p {
+  color: var(--text-light);
+  font-size: 1rem;
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  padding: 0.7rem 1.2rem;
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s ease;
+}
+
+.button:hover {
+  background: #1e40af;
+}
+
+/* Navbar */
+.navbar {
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar a {
+  color: var(--text-dark);
+  text-decoration: none;
+  margin-left: 1.5rem;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: var(--primary);
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 2rem;
+  margin-top: 3rem;
+  background: var(--card-bg);
+  color: var(--text-light);
+  font-size: 0.9rem;
+  border-top: 1px solid #e5e7eb;
+}

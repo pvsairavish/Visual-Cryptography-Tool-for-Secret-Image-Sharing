@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Visual Cryptography Tool</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <div class="container py-5">
+    <div class="text-center mb-4">
+      <h1 class="display-5 fw-bold text-primary">🖼️ Visual Cryptography Tool</h1>
+      <p class="lead text-muted">Encrypt an image into two secure shares and decrypt them back.</p>
+    </div>
+
+    <div class="card shadow p-4 mx-auto" style="max-width: 500px;">
+      <h5 class="text-center mb-3">🔐 Upload an Image</h5>
+      <form action="/encrypt" method="post" enctype="multipart/form-data">
+        <input class="form-control mb-3" type="file" name="file" accept="image/*" required>
+        <button class="btn btn-primary w-100">Encrypt Image</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
